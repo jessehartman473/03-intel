@@ -68,7 +68,7 @@ summary:focus-visible {
 }
 
 .brand-year {
-	margin-left: 8px;
+	margin-inline-start: 8px;
 	color: #c7e4f2;
 	font-weight: normal;
 }
@@ -82,7 +82,7 @@ summary:focus-visible {
 }
 
 .header-link span {
-	margin-left: 8px;
+	margin-inline-start: 8px;
 	color: var(--cyan);
 }
 
@@ -230,7 +230,7 @@ h1 span {
 .intro-index {
 	position: absolute;
 	bottom: 30px;
-	left: 9%;
+	inset-inline-start: 9%;
 	color: #c7e4f2;
 	font-size: 10px;
 	letter-spacing: 1px;
@@ -239,6 +239,50 @@ h1 span {
 .intro-index span {
 	color: var(--cyan);
 	font-weight: bold;
+}
+
+/* The three sustainability areas use Bootstrap's responsive grid. */
+.pillars-section {
+	padding: 72px 0 84px;
+	background: var(--white);
+}
+
+.pillars-heading {
+	margin-bottom: 34px;
+}
+
+.pillars-heading h2 {
+	margin: 8px 0 0;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 38px;
+	font-weight: normal;
+}
+
+.pillar {
+	height: 100%;
+	border-top: 3px solid var(--blue);
+	padding: 20px 0;
+}
+
+.pillar-number {
+	margin-bottom: 12px;
+	color: var(--gold);
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.pillar h3 {
+	margin-bottom: 8px;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 25px;
+	font-weight: normal;
+}
+
+.pillar p:last-child {
+	max-width: 340px;
+	margin-bottom: 0;
+	color: var(--muted);
+	font-size: 14px;
 }
 
 /* Flexbox keeps the milestones in a horizontal, scrollable row. */
@@ -305,7 +349,7 @@ h1 span {
 .timeline-item::before {
 	position: absolute;
 	top: 7px;
-	left: 12px;
+	inset-inline-start: 12px;
 	width: 11px;
 	height: 11px;
 	border: 3px solid #e9ecef;
@@ -317,8 +361,8 @@ h1 span {
 .timeline-item::after {
 	position: absolute;
 	top: 12px;
-	left: 23px;
-	right: -20px;
+	inset-inline-start: 23px;
+	inset-inline-end: -20px;
 	border-top: 1px solid #aeb5bb;
 	content: "";
 }
@@ -326,7 +370,7 @@ h1 span {
 .timeline-year {
 	position: absolute;
 	top: 0;
-	left: 34px;
+	inset-inline-start: 34px;
 	color: var(--blue);
 	font-family: Georgia, "Times New Roman", serif;
 	font-size: 20px;
@@ -450,7 +494,7 @@ h1 span {
 	}
 
 	.intro-index {
-		left: 8%;
+		inset-inline-start: 8%;
 	}
 
 	.timeline-section {
@@ -461,7 +505,7 @@ h1 span {
 		align-items: stretch;
 		flex-direction: column;
 		gap: 20px;
-		padding: 0 0 0 34px;
+		padding: 0 34px 0 0;
 		overflow: visible;
 		scroll-snap-type: none;
 	}
@@ -473,16 +517,16 @@ h1 span {
 
 	.timeline-item::before {
 		top: 8px;
-		left: -27px;
+		inset-inline-start: -27px;
 	}
 
 	.timeline-item::after {
 		top: 20px;
 		bottom: -20px;
-		left: -22px;
-		right: auto;
+		inset-inline-start: -22px;
+		inset-inline-end: auto;
 		border-top: 0;
-		border-left: 1px solid #aeb5bb;
+		border-inline-start: 1px solid #aeb5bb;
 	}
 
 	.timeline-year {
@@ -515,13 +559,13 @@ h1 span {
 
 	.brand-year {
 		display: block;
-		margin-left: 0;
+		margin-inline-start: 0;
 		font-size: 10px;
 	}
 
 	.header-link {
 		max-width: 105px;
-		text-align: right;
+		text-align: start;
 		font-size: 11px;
 		line-height: 1.35;
 	}
